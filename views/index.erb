@@ -2,12 +2,23 @@
 
 <html>
 <head>
-	<title>WDI Network</title>
+	<title>WDI Network - Index</title>
+	<link rel="stylesheet" type="text/css" href="/public/semantic.css">
 </head>
 
 <body>
-	<p>Your shit works</p>
-	
+	<h1>Welcome Back, current user</h1>
+	<h2>My, how you are popular. Look at your list of friends and their most recent posts:</h2>
+
+	<% users.each do |user| %>
+	<p><%= user.username %> is at <%= user.address %> in <%= user.city %>, <%= user.state %> <%= user.country %></p>
+	<% end %>
+
+	<button class="large ui button">
+  		<i class="heart icon"></i>
+  		Like it
+	</button>
+
 </body>
 
 </html>

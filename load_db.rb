@@ -11,6 +11,9 @@ def load_db_tables()
 			username VARCHAR(255),
 			password VARCHAR(255),
 			address VARCHAR(255),
+			city VARCHAR(255),
+			state VARCHAR(255),
+			country VARCHAR(255),
 			geolocation VARCHAR(255)
 		);
 
@@ -38,9 +41,9 @@ def load_db_tables()
 	# Start with a single user in the database
 	database.execute <<-SQL
 		INSERT INTO users 
-			(username, password, address)
+			(username, password, address, city, state, country)
 		VALUES 
-			("dstockalper", 8184, "1000 Foster City Blvd")
+			("dstockalper", 8184, "1000 Foster City Blvd", "Foster City", "CA", "United States")
 		;
 	SQL
 

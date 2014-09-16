@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<title>WDI Network - Login</title>
+</head>
+
+<body>
+	<% errors.each do |message| %>
+	<p style="color:red"><%= message %></p>
+	<% end %>
+
+	<h2>Already a User? Login Here:</h2>
+	<form action="/index" method="POST">
+		<input type="text" name="username" placeholder="Username"><br>
+		<input type="text" password="password" placeholder="Password"><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<h2>First Time User? Register Here:</h2>
+	<form action="/create" method="POST">
+		<input type="text" name="new_username" placeholder="Username"><br>
+		<input type="text" name="new_password" placeholder="Password">
+		<input type="text" name="confirm_password" placeholder="Re-enter Password"><br>
+		<input type="text" name="address" placeholder="Street address / Name of location">
+		<input type="text" name="city" placeholder="City">
+		<input type="text" name="state" placeholder="State">
+		<input type="text" name="country" placeholder="Country"><br>
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+
+</html>
